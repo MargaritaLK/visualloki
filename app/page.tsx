@@ -15,7 +15,6 @@ export default function Home() {
       <Navbar />
 
       <div className=" pt-[120px] min-h-screen flex-col items-center justify-between p-20 bg-[#354545]">
-      {/* <div className="pt-[100px] md:pt-[180px] z-20  flex-col items-center bg-[#354545] "> */}
 
         <div>
           <div className="flex text-[#f12053] text-4xl tracking-wider text-transform:uppercase"> NELSON  - flow</div>
