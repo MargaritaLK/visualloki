@@ -1,6 +1,6 @@
 import styles from './styles.module.css'
  
-export default function FlowmapLayout({
+export default function CoastalmapLayout({
   children,
 }: {
   children: React.ReactNode

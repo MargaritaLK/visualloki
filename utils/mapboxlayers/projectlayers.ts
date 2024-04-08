@@ -21,10 +21,28 @@ export const rivers_polygons_style: FillLayer  = {
   id: 'rivers2',
   type: 'fill',
   paint: {
-    'fill-color': '#f12053', 
+    'fill-color': '#ffb703', 
   }
 };
 
+export const nelsonregionStyle: FillLayer = {
+  id: 'nelsonregion', 
+  type: 'fill', 
+  paint: {
+    'fill-color': '#242424',
+    'fill-opacity' : 0.76
+  }
+}
 
 
+export const aucklandcoastStyle: LineLayer = {
+  id: 'nzcoast', 
+  type: 'line',
+  paint: {
+    'line-color': '#e77148', 
+    'line-width': 1.7, 
+    'line-opacity': 0.9
+  }
+  
+}
 

@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@turf/turf": "^6.5.0",
+    "@types/turf": "^3.5.32",
     "d3-array": "^3.2.4",
     "d3-scale": "^4.0.2",
     "mapbox-gl": "^3.2.0",
