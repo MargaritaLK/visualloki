@@ -89,7 +89,11 @@ export default function Coastalmap() {
       
       <div className=" pt-[120px] min-h-screen flex-col items-center justify-between p-20 bg-[#354545]">
       
-      <div className="flex text-[#e77148] text-4xl tracking-wider text-transform:uppercase py-10"> coastal</div>
+      {/* <div className="flex text-[#e77148] text-4xl tracking-wider text-transform:uppercase py-10"> coastal</div> */}
+      <div>
+          <div className="flex text-[#e77148] text-4xl tracking-wider text-transform:uppercase py-5"> coastal map </div>
+          <div className="flex text-[#AAAFAF]  tracking-wider text-transform:uppercase py-5 "> </div>
+        </div>
       
       {/* <div  className="drop-shadow-2xl">  */}
       <Map

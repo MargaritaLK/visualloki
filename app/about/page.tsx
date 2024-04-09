@@ -7,6 +7,10 @@ export default function About() {
                
         <div className=" pt-[120px] min-h-screen flex-col items-center justify-between p-20 bg-[#354545]">
 
+            <div className='my-20 w-3/5'>
+
+     
+
 
             <div className='tracking-wider'>About the project</div>
             <div className='tracking-wider font-thin py-5'>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -26,6 +30,8 @@ export default function About() {
                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium 
                  voluptas quaerat ipsa labore officiis incidunt molestiae obcaecati illo voluptatibus molli
                  tia illum suscipit dolorem expedita repellendus, ducimus praesentium magni veniam eos?
+            </div>
+
             </div>
 
 
