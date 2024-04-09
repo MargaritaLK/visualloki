@@ -5,44 +5,71 @@ import type {LineLayer} from 'react-map-gl';
 
 
 
-// For more information on data-driven styles, see https://www.mapbox.com/help/gl-dds-ref/
-export const rivers_style_line: LineLayer  = {
-  id: 'rivers1',
-  type: 'line',
-  paint: {
-    'line-color': '#06d6a0', 
-    'line-width': 1, 
-    'line-opacity': 0.9
-  }
-};
 
-
-export const rivers_polygons_style: FillLayer  = {
-  id: 'rivers2',
-  type: 'fill',
-  paint: {
-    'fill-color': '#ffb703', 
-  }
-};
-
-export const nelsonregionStyle: FillLayer = {
-  id: 'nelsonregion', 
-  type: 'fill', 
-  paint: {
-    'fill-color': '#242424',
-    'fill-opacity' : 0.76
-  }
-}
-
-
-export const aucklandcoastStyle: LineLayer = {
-  id: 'nzcoast', 
+export const aucklandcoastStyleLine: LineLayer = {
+  id: 'aucklandcoastLine', 
   type: 'line',
   paint: {
     'line-color': '#e77148', 
-    'line-width': 1.7, 
+    'line-width': 1, 
     'line-opacity': 0.9
   }
-  
 }
+
+
+
+export const aucklandcoastStyleFill: FillLayer = {
+  id: 'aucklandcoastFill', 
+  type: 'fill',
+  paint: {
+    'fill-color': '#354545', 
+    'fill-opacity': 0.3
+  }
+}
+
+
+
+export const coastline7mStyleLine: LineLayer = {
+  id: 'coast7m', 
+  type: 'line',
+  paint: {
+    'line-color': '#e77148', 
+    'line-width': 1, 
+    'line-opacity': 0.9
+  }
+
+}
+
+
+export const coastline7mStyleFill: FillLayer = {
+  id: 'coast7mFill', 
+  type: 'fill',
+  paint: {
+    'fill-color': '#354545', 
+    'fill-opacity': 0.3
+  }
+}
+
+
+export const coastline20mStyleLine: LineLayer = {
+  id: 'coast20m', 
+  type: 'line',
+  paint: {
+    'line-color': '#e77148', 
+    'line-width': 1,
+    'line-opacity': 0.9
+  }
+
+}
+
+
+export const coastline20mStyleFill: FillLayer = {
+  id: 'coast20mFill', 
+  type: 'fill',
+  paint: {
+    'fill-color': '#354545', 
+    'fill-opacity': 0.3
+  }
+}
+
 
