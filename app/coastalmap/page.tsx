@@ -11,6 +11,7 @@ import Map, {Source, Layer} from 'react-map-gl';
 import {AttributionControl} from 'react-map-gl';
 
 import { Navbar } from '@/components/navbar';
+import { Footer } from '@/components/footer';
 
 // import {water_mpx, buildings_mpx} from './mapbox_bg_layers';
 
@@ -242,6 +243,8 @@ export default function Coastalmap() {
 {/* </div> */}
 
 </div>
+
+<Footer />
 
 </div>
 );
