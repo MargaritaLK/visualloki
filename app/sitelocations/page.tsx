@@ -103,26 +103,7 @@ export default function Coastalmap() {
 
 
    
-    // function polyMask(mask, bounds) {
-    //   var bboxPoly = turf.bboxPolygon(bounds);
-    //   return turf.difference(bboxPoly, mask);
-    // }
-    
-    // var bounds = [-122.5336, 37.7049, -122.3122, 37.8398]; // wsen
-    
-    // const bbox  = turf.bboxPolygon(bounds);
 
-    // const tt = {
-    //   "type": "FeatureCollection",
-    //   "name": "bbox_auckland_wgs",
-    //   "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-    //   "features": [
-    //   { "type": "Feature", "properties": { "MINX": 172.73879362587965, "MINY": -38.404893729613178, "MAXX": 177.18804571185635, "MAXY": -34.927190486231879, "CNTX": 174.963419668868, "CNTY": -36.666042107922529, "AREA": 15.473178410022165, "PERIM": 15.853910658715989, "HEIGHT": 3.4777032433812991, "WIDTH": 4.4492520859766955 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 172.738793625879651, -38.404893729613178 ], [ 177.188045711856347, -38.404893729613178 ], [ 177.188045711856347, -34.927190486231879 ], [ 172.738793625879651, -34.927190486231879 ], [ 172.738793625879651, -38.404893729613178 ] ] ] } }
-    //   ]
-    //   }
-      
-    
-    
     
     return (
       <div>
@@ -132,21 +113,21 @@ export default function Coastalmap() {
       
       {/* <div className="flex text-[#e77148] text-4xl tracking-wider text-transform:uppercase py-10"> coastal</div> */}
       <div>
-          <div className="flex text-[#e77148] text-4xl tracking-wider text-transform:uppercase py-5"> coastal map </div>
+          <div className="flex text-[#D96941] text-4xl tracking-wider text-transform:uppercase py-5"> site locations </div>
           <div className="flex text-[#AAAFAF]  tracking-wider text-transform:uppercase py-5 "> </div>
         </div>
       
       {/* <div  className="drop-shadow-2xl">  */}
       <Map
-      style={{ height: '80vh', width: '80%' }}
+      style={{ height: '100vh', width: '100%' }}
       initialViewState={{
-        latitude: -36.9221995,
-        longitude: 174.8914365,
-        zoom: 15.3
+        latitude: 7.09929244603147058,
+        longitude: 171.30422338904287471,
+        zoom: 12
       }}
       
       // mapStyle="mapbox://styles/margarita12/cluq5psso00j001r7ckm2ayus" //               
-      mapStyle="mapbox://styles/margarita12/clusyi3io000y01rb5qlnhjq8" //               
+      mapStyle="mapbox://styles/mapbox/satellite-v9" //               
       mapboxAccessToken={MAPBOX_PUBLIC_TOKEN}
       interactiveLayerIds={['data1']}
       onMouseMove={onHover}

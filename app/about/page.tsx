@@ -14,6 +14,7 @@ export default function About() {
 
 
             <div className='text-[#e77148]  tracking-wider font-bold'>About the project</div>
+            
             <div className='text-[#AAAFAF]  tracking-wider py-5'>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                  Porro excepturi at dolor veritatis sint corporis ipsum veniam voluptates, 
                  nihil est accusantium quod repellat fuga animi perspiciatis nesciunt quibusdam odit sapiente?

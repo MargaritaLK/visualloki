@@ -18,9 +18,11 @@ export default function Home() {
       <div className=" pt-[120px] min-h-screen flex-col items-center justify-between p-20 bg-[#354545]">
 
         <div className='my-20 w-3/5' >
-          <div className="flex text-[#e77148] text-4xl tracking-wider text-transform:uppercase">  </div>
-          <div className="flex text-[#AAAFAF]  tracking-wider text-transform:uppercase py-10 ">Welcome to our web app! Please note that the content and functionality are currently being tested for proof of concept, and the data displayed here is not representative of actual project data. </div>
+          <div className="flex text-[#e77148] text-4xl tracking-wider text-transform:uppercase py-10"> RMI  </div>
+          <div className="flex text-[#AAAFAF]  tracking-wider text-transform:uppercase  ">Welcome to our web app! Please note that the content and functionality are currently being tested for proof of concept, and the data displayed here is not representative of actual project data. </div>
         </div>
+
+    
 
       </div>
 
