@@ -6,34 +6,24 @@ import type {LineLayer} from 'react-map-gl';
 
 
 
-export const aucklandcoastStyleLine: LineLayer = {
-  id: 'aucklandcoastLine', 
-  type: 'line',
-  paint: {
-    'line-color': '#e77148', 
-    'line-width': 1, 
-    'line-opacity': 0.9
-  }
-}
 
 
-
-export const aucklandcoastStyleFill: FillLayer = {
-  id: 'aucklandcoastFill', 
+export const velocity1mStyleFill: FillLayer = {
+  id: 'velocity1msFill', 
   type: 'fill',
   paint: {
-    'fill-color': '#354545', 
-    'fill-opacity': 0.3
+    'fill-color': '#90be6d', 
+    'fill-opacity': 0.9
   }
 }
 
 
 
-export const coastline7mStyleLine: LineLayer = {
-  id: 'coast7m', 
+export const velocityStyleLine: LineLayer = {
+  id: 'velocity_line', 
   type: 'line',
   paint: {
-    'line-color': '#e77148', 
+    'line-color': '#363636', 
     'line-width': 1, 
     'line-opacity': 0.9
   }
@@ -41,35 +31,15 @@ export const coastline7mStyleLine: LineLayer = {
 }
 
 
-export const coastline7mStyleFill: FillLayer = {
-  id: 'coast7mFill', 
+
+
+
+export const velocity1_5mStyleFill: FillLayer = {
+  id: 'velocity1_5msFill', 
   type: 'fill',
   paint: {
-    'fill-color': '#354545', 
-    'fill-opacity': 0.3
+    'fill-color': '#f9c750', 
+    'fill-opacity': 0.9
   }
 }
-
-
-export const coastline20mStyleLine: LineLayer = {
-  id: 'coast20m', 
-  type: 'line',
-  paint: {
-    'line-color': '#e77148', 
-    'line-width': 1,
-    'line-opacity': 0.9
-  }
-
-}
-
-
-export const coastline20mStyleFill: FillLayer = {
-  id: 'coast20mFill', 
-  type: 'fill',
-  paint: {
-    'fill-color': '#354545', 
-    'fill-opacity': 0.3
-  }
-}
-
 
