@@ -12,10 +12,14 @@ import {AttributionControl} from 'react-map-gl';
 
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
+import Legend  from '@/components/legend';
 
-import {velocityStyleLine} from '../../utils/mapboxlayers/projectlayers'
-import {velocity1mStyleFill} from '../../utils/mapboxlayers/projectlayers'
-import {velocity1_5mStyleFill} from '../../utils/mapboxlayers/projectlayers'
+import {velocity1mStyleFill, velocity1mStyleLine} from '../../utils/mapboxlayers/projectlayers'
+import {velocity1_5mStyleFill, velocity1_5mStyleLine} from '../../utils/mapboxlayers/projectlayers'
+import {velocity2mStyleFill, velocity2mStyleLine} from '../../utils/mapboxlayers/projectlayers'
+import {velocity2_5mStyleFill, velocity2_5mStyleLine} from '../../utils/mapboxlayers/projectlayers'
+import {velocity3mStyleFill,velocity3mStyleLine} from '../../utils/mapboxlayers/projectlayers'
+import {seaStyleFill} from '../../utils/mapboxlayers/projectlayers'
 
 
 const MAPBOX_PUBLIC_TOKEN = 'pk.eyJ1IjoibWFyZ2FyaXRhMTIiLCJhIjoiY2s1Nm5mNWpxMDRvcTNtbHppYm4xeTJpOSJ9.boMER5L2ddRxh1pR7hDWJA'; 
@@ -25,6 +29,10 @@ export default function Coastalmap() {
   
   const [velocity1msData, setVelocity1msData] = useState(null)
   const [velocity1_5msData, setVelocity1_5msData] = useState(null)
+  const [velocity2msData, setVelocity2msData] = useState(null)
+  const [velocity2_5msData, setVelocity2_5msData] = useState(null)
+  const [velocity3msData, setVelocity3msData] = useState(null)
+  const [seaData, setSeaData] = useState(null)
   const [hoverInfo, setHoverInfo] = useState(null);
   
   
@@ -41,10 +49,7 @@ export default function Coastalmap() {
         .catch(err => console.error('Could not load data', err)); // eslint-disable-line
       }, []);
       
-      
-
-
-          
+    
     useEffect(() => {
       /* global fetch */
       fetch(
@@ -53,6 +58,58 @@ export default function Coastalmap() {
       .then(resp => resp.json())
       .then(json => {
         setVelocity1_5msData(json)})
+        .catch(err => console.error('Could not load data', err)); // eslint-disable-line
+      }, []);
+
+                
+    useEffect(() => {
+      /* global fetch */
+      fetch(
+        'https://raw.githubusercontent.com/MargaritaLK/__data_experimental/main/P_Napier/velocity/500y_base_vmax_above_2ms_wgs.geojson'
+      )
+      .then(resp => resp.json())
+      .then(json => {
+        setVelocity2msData(json)})
+        .catch(err => console.error('Could not load data', err)); // eslint-disable-line
+      }, []);
+      
+    
+                      
+    useEffect(() => {
+      /* global fetch */
+      fetch(
+        'https://raw.githubusercontent.com/MargaritaLK/__data_experimental/main/P_Napier/velocity/500y_base_vmax_above_2_5ms_wgs.geojson'
+      )
+      .then(resp => resp.json())
+      .then(json => {
+        setVelocity2_5msData(json)})
+        .catch(err => console.error('Could not load data', err)); // eslint-disable-line
+      }, []);
+      
+
+                            
+    useEffect(() => {
+      /* global fetch */
+      fetch(
+        'https://raw.githubusercontent.com/MargaritaLK/__data_experimental/main/P_Napier/velocity/500y_base_vmax_above_3ms_wgs.geojson'
+      )
+      .then(resp => resp.json())
+      .then(json => {
+        setVelocity3msData(json)})
+        .catch(err => console.error('Could not load data', err)); // eslint-disable-line
+      }, []);
+      
+      
+
+                                  
+    useEffect(() => {
+      /* global fetch */
+      fetch(
+        'https://raw.githubusercontent.com/MargaritaLK/__data_experimental/main/P_Napier/sea_napier_wgs.geojson'
+      )
+      .then(resp => resp.json())
+      .then(json => {
+        setSeaData(json)})
         .catch(err => console.error('Could not load data', err)); // eslint-disable-line
       }, []);
       
@@ -76,13 +133,29 @@ export default function Coastalmap() {
     const data1 = useMemo(() => {
       return velocity1msData
     }, [velocity1msData])
-
-
-    
-
+  
     const data2 = useMemo(() => {
       return velocity1_5msData
     }, [velocity1_5msData])
+  
+    const data3 = useMemo(() => {
+      return velocity2msData
+    }, [velocity2msData])
+
+  
+    const data4 = useMemo(() => {
+      return velocity2_5msData
+    }, [velocity2_5msData])
+
+  
+    const data5 = useMemo(() => {
+      return velocity3msData
+    }, [velocity3msData])
+
+
+    const data6 = useMemo(() => {
+      return seaData
+    }, [seaData])
 
 
     
@@ -91,7 +164,7 @@ export default function Coastalmap() {
       <div>
       <Navbar />
       
-      <div className=" pt-[120px] min-h-screen flex-col items-center justify-between p-10 bg-[#0c0c0c]">
+      <div className=" pt-[120px] min-h-screen flex-col items-center justify-between p-10 bg-[#354545]">
       
       {/* <div className="flex text-[#e77148] text-4xl tracking-wider text-transform:uppercase py-10"> coastal</div>
       <div>
@@ -100,13 +173,21 @@ export default function Coastalmap() {
         </div> */}
       
       {/* <div  className="drop-shadow-2xl">  */}
+
+      <Navbar />
+
+      {/* <Legend /> */}
+
+      <Legend />
+      
       <Map
       style={{ height: '100vh', width: '100%' }}
       initialViewState={{
         latitude: -39.5688460,
         longitude: 176.84236931005989,
-        zoom: 10.3
+        zoom: 12
       }}
+      minZoom={10.5}
 
 
       // 176.84236931005989391 -39.56884601232292908
@@ -122,13 +203,41 @@ export default function Coastalmap() {
 
       <Source id='velocity1ms' type="geojson" data = {data1}>
         <Layer {...velocity1mStyleFill} />
+        <Layer {...velocity1mStyleLine} />
       </Source>
 
 
       <Source id='velocity1_5ms' type="geojson" data = {data2}>
         <Layer {...velocity1_5mStyleFill} />
+        <Layer {...velocity1_5mStyleLine} />
+      </Source>
+      
+      <Source id='velocity2ms' type="geojson" data = {data3}>
+        <Layer {...velocity2mStyleFill} />
+        <Layer {...velocity2mStyleLine} />
       </Source>
 
+
+
+      <Source id='velocity2_5ms' type="geojson" data = {data4}>
+        <Layer {...velocity2_5mStyleFill} />
+        <Layer {...velocity2_5mStyleLine} />
+      </Source>
+
+
+
+      <Source id='velocity3ms' type="geojson" data = {data5}>
+        <Layer {...velocity3mStyleFill} />
+        <Layer {...velocity3mStyleLine} />
+      </Source>
+
+
+      
+      <Source id='sea' type="geojson" data = {data6}>
+        <Layer {...seaStyleFill} />
+      </Source>
+
+ 
 
 
 
@@ -144,9 +253,10 @@ export default function Coastalmap() {
 </Map>
 
 
-{/* </div> */}
-
 </div>
+
+
+
 
 <Footer />
 
