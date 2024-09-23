@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Legend() {
+export default function legendVelocity() {
   return (
     <div className="legend" style={{
       position: 'absolute', 
@@ -22,3 +22,4 @@ export default function Legend() {
     </div>
   );
 }
+

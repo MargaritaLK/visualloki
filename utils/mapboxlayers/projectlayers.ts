@@ -122,7 +122,6 @@ export const velocity3mStyleFill: FillLayer = {
 
 
 
-
 export const seaStyleFill: FillLayer = {
   id: 'seaFill', 
   type: 'fill',
@@ -132,5 +131,54 @@ export const seaStyleFill: FillLayer = {
   }
 }
 
+const set_opacity = 1
+
+export const flooddepth_1_StyleFill: FillLayer = {
+  id: 'depthFill_1', 
+  type: 'fill',
+  paint: {
+    'fill-color': '#359eac', 
+    'fill-opacity': set_opacity
+  }
+}
+
+
+export const flooddepth_2_StyleFill: FillLayer = {
+  id: 'depthFill_2', 
+  type: 'fill',
+  paint: {
+    'fill-color': '#348c97', 
+    'fill-opacity': set_opacity
+  }
+}
+
+
+
+export const flooddepth_3_StyleFill: FillLayer = {
+  id: 'depthFill_3', 
+  type: 'fill',
+  paint: {
+    'fill-color': '#27757a', 
+    'fill-opacity': set_opacity
+  }
+}
+
+export const flooddepth_4_StyleFill: FillLayer = {
+  id: 'depthFill_4', 
+  type: 'fill',
+  paint: {
+    'fill-color': '#0c4f51', 
+    'fill-opacity': set_opacity
+  }
+}
+
+export const flooddepth_5_StyleFill: FillLayer = {
+  id: 'depthFill_5', 
+  type: 'fill',
+  paint: {
+    'fill-color': '#051919', 
+    'fill-opacity': set_opacity
+  }
+}
 
 

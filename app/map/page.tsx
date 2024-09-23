@@ -12,7 +12,7 @@ import {AttributionControl} from 'react-map-gl';
 
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
-import Legend  from '@/components/legend';
+import LegendVelocity  from '@/components/legendVelocity';
 
 import {velocity1mStyleFill, velocity1mStyleLine} from '../../utils/mapboxlayers/projectlayers'
 import {velocity1_5mStyleFill, velocity1_5mStyleLine} from '../../utils/mapboxlayers/projectlayers'
@@ -178,7 +178,7 @@ export default function Coastalmap() {
 
       {/* <Legend /> */}
 
-      <Legend />
+      <LegendVelocity />
       
       <Map
       style={{ height: '100vh', width: '100%' }}
