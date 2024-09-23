@@ -14,7 +14,8 @@ export default function legendDepth() {
     }}>
       <h4>Flood Depth (m)</h4>
       <br />
-      <div><span style={{ backgroundColor: '#051919', width: 20, height: 20, display: 'inline-block', marginRight: 5 }}></span> &gt; 2 m/s</div>
+      <div><span style={{ backgroundColor: '#000000', width: 20, height: 20, display: 'inline-block', marginRight: 5 }}></span> &gt; 2.5 m/s</div>
+      <div><span style={{ backgroundColor: '#051919', width: 20, height: 20, display: 'inline-block', marginRight: 5 }}></span> 2 - 2.5 m/s</div>
       <div><span style={{ backgroundColor: '#0c4f51', width: 20, height: 20, display: 'inline-block', marginRight: 5 }}></span> 1.5 - 2 m/s</div>
       <div><span style={{ backgroundColor: '#27757a', width: 20, height: 20, display: 'inline-block', marginRight: 5 }}></span> 1 - 1.5 m/s</div>
       <div><span style={{ backgroundColor: '#348c97', width: 20, height: 20, display: 'inline-block', marginRight: 5 }}></span> 0.5 - 1 m/s</div>

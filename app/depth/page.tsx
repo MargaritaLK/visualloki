@@ -19,6 +19,7 @@ import {flooddepth_2_StyleFill} from '../../utils/mapboxlayers/projectlayers'
 import {flooddepth_3_StyleFill} from '../../utils/mapboxlayers/projectlayers'
 import {flooddepth_4_StyleFill} from '../../utils/mapboxlayers/projectlayers'
 import {flooddepth_5_StyleFill} from '../../utils/mapboxlayers/projectlayers'
+import {flooddepth_6_StyleFill} from '../../utils/mapboxlayers/projectlayers'
 
 import {seaStyleFill} from '../../utils/mapboxlayers/projectlayers'
 
@@ -225,6 +226,11 @@ export default function Depthmap() {
 
       <Source id='depth_5' type="geojson" data = {data5}>
         <Layer {...flooddepth_5_StyleFill} />
+      </Source>
+      
+      
+      <Source id='depth_6' type="geojson" data = {data6}>
+        <Layer {...flooddepth_6_StyleFill} />
       </Source>
       
 

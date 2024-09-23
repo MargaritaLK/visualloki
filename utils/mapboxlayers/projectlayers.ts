@@ -138,7 +138,13 @@ export const flooddepth_1_StyleFill: FillLayer = {
   type: 'fill',
   paint: {
     'fill-color': '#359eac', 
-    'fill-opacity': set_opacity
+    'fill-opacity': [
+      'interpolate', 
+      ['linear'], 
+      ['zoom'], 
+      10, 1,  
+      15, 0.4  
+    ]
   }
 }
 
@@ -148,7 +154,13 @@ export const flooddepth_2_StyleFill: FillLayer = {
   type: 'fill',
   paint: {
     'fill-color': '#348c97', 
-    'fill-opacity': set_opacity
+    'fill-opacity': [
+      'interpolate', 
+      ['linear'], 
+      ['zoom'], 
+      10, 1,  
+      15, 0.4  
+    ]
   }
 }
 
@@ -159,7 +171,13 @@ export const flooddepth_3_StyleFill: FillLayer = {
   type: 'fill',
   paint: {
     'fill-color': '#27757a', 
-    'fill-opacity': set_opacity
+    'fill-opacity': [
+      'interpolate', 
+      ['linear'], 
+      ['zoom'], 
+      10, 1,  
+      15, 0.4  
+    ]
   }
 }
 
@@ -168,7 +186,13 @@ export const flooddepth_4_StyleFill: FillLayer = {
   type: 'fill',
   paint: {
     'fill-color': '#0c4f51', 
-    'fill-opacity': set_opacity
+    'fill-opacity': [
+      'interpolate', 
+      ['linear'], 
+      ['zoom'], 
+      10, 1,  
+      15, 0.4  
+    ]
   }
 }
 
@@ -177,7 +201,29 @@ export const flooddepth_5_StyleFill: FillLayer = {
   type: 'fill',
   paint: {
     'fill-color': '#051919', 
-    'fill-opacity': set_opacity
+    'fill-opacity': [
+      'interpolate', 
+      ['linear'], 
+      ['zoom'], 
+      10, 1,  
+      15, 0.4  
+    ]
+  }
+}
+
+
+export const flooddepth_6_StyleFill: FillLayer = {
+  id: 'depthFill_6', 
+  type: 'fill',
+  paint: {
+    'fill-color': '#000000', 
+    'fill-opacity': [
+      'interpolate', 
+      ['linear'], 
+      ['zoom'], 
+      10, 1,  
+      15, 0.4  
+    ]
   }
 }
 
