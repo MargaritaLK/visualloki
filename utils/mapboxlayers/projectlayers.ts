@@ -1,4 +1,3 @@
-import Map, {Layer} from 'react-map-gl';
 
 import type {FillLayer} from 'react-map-gl';
 import type {LineLayer} from 'react-map-gl';
@@ -228,3 +227,19 @@ export const flooddepth_6_StyleFill: FillLayer = {
 }
 
 
+
+
+export const flooddepth_light_StyleFill: FillLayer = {
+  id: 'depthFill_1', 
+  type: 'fill',
+  paint: {
+    'fill-color': '#359eac', 
+    'fill-opacity': [
+      'interpolate', 
+      ['linear'], 
+      ['zoom'], 
+      10, 0.4,  
+      15, 0.4  
+    ]
+  }
+}
