@@ -79,7 +79,7 @@ export default function Buildings() {
 
       <div className="pt-[120px] min-h-screen flex-col items-center justify-between p-10 bg-[#354545]">
         <Navbar />
-        <LegendBuildings />
+        {/* <LegendBuildings /> */}
 
         <Map
           style={{ height: '100vh', width: '100%' }}
