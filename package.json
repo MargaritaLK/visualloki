@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@turf/projection": "^7.1.0",
     "@turf/turf": "^6.5.0",
     "@types/turf": "^3.5.32",
     "d3-array": "^3.2.4",
