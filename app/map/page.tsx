@@ -19,8 +19,7 @@ import { velocity1_5mStyleFill, velocity1_5mStyleLine } from '../../utils/mapbox
 import { velocity2mStyleFill, velocity2mStyleLine } from '../../utils/mapboxLayerstyles/velocitystyles'
 import { velocity2_5mStyleFill, velocity2_5mStyleLine } from '../../utils/mapboxLayerstyles/velocitystyles'
 import { velocity3mStyleFill, velocity3mStyleLine } from '../../utils/mapboxLayerstyles/velocitystyles'
-
-import { seaStyleFill } from '@/utils/mapboxLayerstyles/basestyles';
+import { seaStyleFill } from '../../utils/mapboxLayerstyles/velocitystyles'
 
 
 const MAPBOX_PUBLIC_TOKEN = 'pk.eyJ1IjoibWFyZ2FyaXRhMTIiLCJhIjoiY2s1Nm5mNWpxMDRvcTNtbHppYm4xeTJpOSJ9.boMER5L2ddRxh1pR7hDWJA';
