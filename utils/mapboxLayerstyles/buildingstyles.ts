@@ -1,32 +1,12 @@
 
 import type {FillLayer} from 'react-map-gl';
-import type {LineLayer} from 'react-map-gl';
 import type {CircleLayer} from 'react-map-gl';
  
 
 
-export const buildings_StyleFill: FillLayer = {
-    id: 'depth_buildinga', 
-    type: 'fill',
-    paint: {
-      'fill-color': '#99d98c', 
-      'fill-opacity': 0.9
-    }
-  }
-  
-
-  // export const depth_buildings_StyleFill: FillLayer = {
-  //   id: 'all_buildings', 
-  //   type: 'fill',
-  //   paint: {
-  //     'fill-color': '#f9c750', 
-  //     'fill-opacity': 0.9
-  //   }
-  // }
-  
 
   export const buildings_StylePoints: CircleLayer = {
-    id: 'depth_buildinga',
+    id: 'buildings_points',
     type: 'circle',
     paint: {
       'circle-color': '#99d98c',

@@ -1,7 +1,5 @@
 
 import type {FillLayer} from 'react-map-gl';
-import type {LineLayer} from 'react-map-gl';
-
 
 
 export const water_mpx: FillLayer = {

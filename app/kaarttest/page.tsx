@@ -11,25 +11,63 @@ import 'mapbox-gl-compare/dist/mapbox-gl-compare.css';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 
-import { flooddepth_light_StyleFill, flooddepth_1_StyleFill } from '../../utils/mapboxLayerstyles/depthstyles';
-import { seaStyleFill,  } from '../../utils/mapboxLayerstyles/basestyles';
+import { seaStyleFill } from '../../utils/mapboxLayerstyles/basestyles';
+import { flooddepth_light_StyleFill } from '../../utils/mapboxLayerstyles/depthstyles';
 import { depth_buildings_StyleFill } from '../../utils/mapboxLayerstyles/buildingstyles';
 
-
-import { Base500yrDepthLayers } from  '../../utils/mapboxMaps/Base500yrDepthLayers';
-import { Wai500yrDepthLayers } from  '../../utils/mapboxMaps/wai500yrDepthLayers';
-
-const LAYERS_BEFOREMAP = Base500yrDepthLayers
-const LAYERS_AFTERMAP = Wai500yrDepthLayers
-
- 
 const MAPBOX_PUBLIC_TOKEN =
   'pk.eyJ1IjoibWFyZ2FyaXRhMTIiLCJhIjoiY2s1Nm5mNWpxMDRvcTNtbHppYm4xeTJpOSJ9.boMER5L2ddRxh1pR7hDWJA';
 
+const LAYERS_BEFOREMAP = [
+  {
+    id: 'flood_scen1',
+    url: 'https://raw.githubusercontent.com/MargaritaLK/__data_experimental/main/P_Napier/depth_thresholds/500yr_base_max_depth_above_2m_wgs.geojson',
+    style: {
+      type: 'fill',
+      paint: depth_buildings_StyleFill.paint,
+      layout: depth_buildings_StyleFill.layout,
+    },
+  },
+  {
+    id: 'sea_before',
+    url: 'https://raw.githubusercontent.com/MargaritaLK/__data_experimental/main/P_Napier/sea_napier_wgs.geojson',
+    style: {
+      type: 'fill',
+      paint: seaStyleFill.paint,
+      layout: seaStyleFill.layout,
+    },
+  },
+];
 
-
-
-
+const LAYERS_AFTERMAP = [
+  {
+    id: 'flood_scen2',
+    url: 'https://raw.githubusercontent.com/MargaritaLK/__data_experimental/main/P_Napier/depth_thresholds/500yr_base_max_depth_above_0_1m_wgs.geojson',
+    style: {
+      type: 'fill',
+      paint: flooddepth_light_StyleFill.paint,
+      layout: flooddepth_light_StyleFill.layout,
+    },
+  },
+  {
+    id: 'depth_buildings',
+    url: 'https://raw.githubusercontent.com/MargaritaLK/__data_experimental/main/P_Napier/buildings/500yr_base_buildings_wgs.geojson',
+    style: {
+      type: 'fill',
+      paint: depth_buildings_StyleFill.paint,
+      layout: depth_buildings_StyleFill.layout,
+    },
+  },
+  {
+    id: 'sea_after',
+    url: 'https://raw.githubusercontent.com/MargaritaLK/__data_experimental/main/P_Napier/sea_napier_wgs.geojson',
+    style: {
+      type: 'fill',
+      paint: seaStyleFill.paint,
+      layout: seaStyleFill.layout,
+    },
+  },
+];
 
 export default function Swiper() {
   const [layerData, setLayerData] = useState({});

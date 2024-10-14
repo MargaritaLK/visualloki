@@ -14,8 +14,9 @@ import {
   flooddepth_4_StyleFill,
   flooddepth_5_StyleFill,
   flooddepth_6_StyleFill,
-  seaStyleFill,
-} from '../../utils/mapboxlayers/projectlayers';
+} from '../../utils/mapboxLayerstyles/depthstyles';
+
+import { seaStyleFill } from '@/utils/mapboxLayerstyles/basestyles';
 
 const MAPBOX_PUBLIC_TOKEN = 'pk.eyJ1IjoibWFyZ2FyaXRhMTIiLCJhIjoiY2s1Nm5mNWpxMDRvcTNtbHppYm4xeTJpOSJ9.boMER5L2ddRxh1pR7hDWJA';
 
