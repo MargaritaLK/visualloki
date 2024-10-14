@@ -15,6 +15,7 @@
     "d3-array": "^3.2.4",
     "d3-scale": "^4.0.2",
     "mapbox-gl": "^3.2.0",
+    "mapbox-gl-compare": "^0.4.1",
     "next": "14.1.4",
     "react": "^18",
     "react-dom": "^18",

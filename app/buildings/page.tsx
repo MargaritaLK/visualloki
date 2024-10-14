@@ -11,9 +11,9 @@ import { Footer } from '@/components/footer';
 import LegendBuildings from '@/components/legendDepthBuildings';
 
 
-import { flooddepth_light_StyleFill } from '../../utils/mapboxlayers/projectlayers';
-import { buildings_StyleFill, depth_buildings_StyleFill, buildings_StylePoints } from '../../utils/mapboxlayers/buildingstyles';
-import { seaStyleFill } from '../../utils/mapboxlayers/projectlayers';
+import { flooddepth_light_StyleFill } from '../../utils/mapboxLayerstyles/depthstyles';
+import { depth_buildings_StyleFill, buildings_StylePoints } from '../../utils/mapboxLayerstyles/buildingstyles';
+import { seaStyleFill } from '../../utils/mapboxLayerstyles/basestyles';
 
 const MAPBOX_PUBLIC_TOKEN =
   'pk.eyJ1IjoibWFyZ2FyaXRhMTIiLCJhIjoiY2s1Nm5mNWpxMDRvcTNtbHppYm4xeTJpOSJ9.boMER5L2ddRxh1pR7hDWJA';
@@ -25,13 +25,6 @@ const LAYERS = [
     url: 'https://raw.githubusercontent.com/MargaritaLK/__data_experimental/main/P_Napier/depth_thresholds/500yr_base_max_depth_above_0_1m_wgs.geojson',
     style: flooddepth_light_StyleFill,
   },
-
-  // {
-  //   id: 'all_buildings',
-  //   url: 'https://raw.githubusercontent.com/MargaritaLK/__data_experimental/main/P_Napier/buildings/all_buildings_wgs_large_extent_centroids.geojson',
-  //   style: buildings_StylePoints,
-  // },
-
   {
     id: 'depth_buildings',
     url: 'https://raw.githubusercontent.com/MargaritaLK/__data_experimental/main/P_Napier/buildings/500yr_base_buildings_wgs.geojson',
@@ -79,7 +72,7 @@ export default function Buildings() {
 
       <div className="pt-[120px] min-h-screen flex-col items-center justify-between p-10 bg-[#354545]">
         <Navbar />
-        {/* <LegendBuildings /> */}
+        <LegendBuildings />
 
         <Map
           style={{ height: '100vh', width: '100%' }}
