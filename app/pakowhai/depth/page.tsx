@@ -8,7 +8,6 @@ import { useState, useEffect, useMemo, useCallback } from 'react';
 
 import Map, { Source, Layer } from 'react-map-gl';
 
-import { AttributionControl } from 'react-map-gl';
 
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';

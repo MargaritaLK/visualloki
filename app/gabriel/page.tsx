@@ -10,7 +10,7 @@ import { Footer } from '@/components/footer';
 
 const MAPBOX_PUBLIC_TOKEN = 'pk.eyJ1IjoibWFyZ2FyaXRhMTIiLCJhIjoiY2s1Nm5mNWpxMDRvcTNtbHppYm4xeTJpOSJ9.boMER5L2ddRxh1pR7hDWJA'; 
 
-export default function Areamap() {
+export default function Gabrielmap() {
 
   const [hoverInfo, setHoverInfo] = useState(null);
 

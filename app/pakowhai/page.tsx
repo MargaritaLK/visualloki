@@ -22,8 +22,15 @@ export default function Pakowhai() {
         <Navbar />
 
 
+      <div className="text-2xl uppercase  text-gray-400 p-10">
+        Pakowhai area
+      </div>
 
-        <Link href="/pakowhai/depth" className="hover:text-slate-400 px-2 mx-1 "> depth </Link>
+
+      
+
+
+        <Link href="/pakowhai/depth" className="hover:text-slate-400 mx-1 p-10 ">DEPTH MAP </Link>
        
 
 
