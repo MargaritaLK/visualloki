@@ -122,3 +122,27 @@ export const velocity3mStyleFill: FillLayer = {
 
 
 
+
+
+export const velocity_categories: FillLayer = {
+  id: 'velocityFill', 
+  type: 'fill',
+  paint: {
+    'fill-color': [
+      'match',
+      ['get', 'velocity_class'], 
+      "0-0.5 m/s", '#90be6d', 
+      "0.5-1 m/s", '#f9c750',
+      "1-1.5 m/s", '#f89621',
+      "1.5-2 m/s", '#f3722b',
+      ">2 m/s", '#ef4347', 
+      '#051919', // Standaardkleur als geen match
+    ],
+    'fill-opacity': [
+      'match',
+      ['get', 'velocity_class'], 
+      "0-0.5 m/s", 0,  
+      0.7 // Standaard opaciteit als geen match
+    ]
+  }
+};

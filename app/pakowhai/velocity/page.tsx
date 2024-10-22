@@ -11,8 +11,7 @@ import Map, { Source, Layer } from 'react-map-gl';
 
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
-import { flooddepth_categories } from '../../../utils/mapboxLayerstyles/depthstyles';
-import { cat3_land_fill, cat3_land_line, area_inverse_fill } from '../../../utils/mapboxLayerstyles/basestyles';
+import { velocity_categories } from '../../../utils/mapboxLayerstyles/velocitystyles';
 
 
 const MAPBOX_PUBLIC_TOKEN = 'pk.eyJ1IjoibWFyZ2FyaXRhMTIiLCJhIjoiY2s1Nm5mNWpxMDRvcTNtbHppYm4xeTJpOSJ9.boMER5L2ddRxh1pR7hDWJA';
@@ -21,31 +20,16 @@ const MAPBOX_PUBLIC_TOKEN = 'pk.eyJ1IjoibWFyZ2FyaXRhMTIiLCJhIjoiY2s1Nm5mNWpxMDRv
 
 const LAYERS = [
     {
-      id: 'cat3_land_fill',
-      url: 'https://raw.githubusercontent.com/MargaritaLK/__data_experimental/main/P_Napier/areas/cat_3_area.geojson',
-      style: cat3_land_fill,
-    },
-    {
-      id: 'flooddepth',
-      url: 'https://raw.githubusercontent.com/MargaritaLK/__data_experimental/main/P_Napier/depth_thresholds/pakowhai/TKwai500yplus400p_Proposed_depth_wgs.geojson',
-      style: flooddepth_categories,
-    }, 
-    {
-      id: 'cat3_land_line',
-      url: 'https://raw.githubusercontent.com/MargaritaLK/__data_experimental/main/P_Napier/areas/cat_3_area.geojson',
-      style: cat3_land_line,
-    },
-    {
-      id: 'uitsparing_gebied',
-      url: 'https://raw.githubusercontent.com/MargaritaLK/__data_experimental/main/P_Napier/areas/pakowhai_area_inverse.geojson',
-      style: area_inverse_fill,
-    },
+      id: 'velocity_pakowhai',
+      url: 'https://raw.githubusercontent.com/MargaritaLK/__data_experimental/main/P_Napier/velocity/pakowhai/velocity_spillway_2.geojson',
+      style: velocity_categories,
+    }
   ];
   
 
 
 
-export default function PakowhaiDepth() {
+export default function PakowhaiVelocity() {
     const [layerData, setLayerData] = useState<Record<string, any>>({});
     const [hoverInfo, setHoverInfo] = useState(null);
 
@@ -90,9 +74,9 @@ export default function PakowhaiDepth() {
             zoom: 12,
           }}
           minZoom={10.5}
-          maxZoom={15}
-          mapStyle="mapbox://styles/margarita12/cm1r18bib012p01rbhgj184u8"  /// light
-
+          // maxZoom={15}
+          // mapStyle="mapbox://styles/margarita12/cm1r18bib012p01rbhgj184u8" // light
+          mapStyle="mapbox://styles/margarita12/cm0vsv1p100di01pq0pzmahmh" //  sateleti
           mapboxAccessToken={MAPBOX_PUBLIC_TOKEN}
           interactiveLayerIds={['data1']}
           onMouseMove={onHover}
